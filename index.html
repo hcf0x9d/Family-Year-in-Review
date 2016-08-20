@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2016 Edition</title>
+
+	<script src="https://use.typekit.net/tij2qgs.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	<link rel="stylesheet" href="lib/font/blacktie/blacktie-fontawesome.css">
+	<link rel="stylesheet" href="lib/css/grid.css">
+	<link rel="stylesheet" href="lib/css/style.css">
+	<link rel="stylesheet" href="lib/css/structure.css">
+	<link rel="stylesheet" href="lib/css/mobile.css">
+
+	<script src="lib/js/jquery-1.7.2.min.js"></script>
+
+	<script>
+	$(function () {
+		biggify();
+	});
+
+	$(window).resize(function () {
+		biggify();
+	});
+	/**
+	 * Things that need to happen:
+	 *
+	 *    - lazy loader
+	 *    - 
+	 * 
+	 */
+	
+		function biggify() {
+			'use strict';
+
+			var h = $(window).height(),
+				el = '.bigSection';
+
+			$(el).height(h + 2);
+			console.log('DEBUG :: ' + el + ' has been made ' + h + 'px tall');
+		}
+
+		function scrollIt(nextId) {
+			'use strict';
+			$('html, body').animate({
+		        scrollTop: $('#' + nextId).offset().top + 2
+		    }, 1000);
+		}
+	</script>
+	
+	<style>
+	html{
+		font-size: 100%;
+	}
+	body{
+		font-size: 1em;
+	}
+	 /* brandon-grotesque */
+	.btn-scrollIt{
+		position: absolute;
+		left: 50%;
+		margin-left: -25px;
+		width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		bottom: 20px;
+	}
+	.parallax{
+		background-attachment: fixed;
+		position: relative;
+	}
+	</style>
+</head>
+<body>
+	<!-- <header>
+		<nav></nav>
+	</header> -->
+
+	<section id="intro" class="bigSection scrollTarget parallax" style="background-image:url(/img/cardPicture.jpg);background-position: center center; background-size: cover; background-repeat: no-repeat;">
+		<div class="intro_content">
+			<h1 class="title">2015</h1>
+			<h2 class="subtitle">Take a walk through this year and see what happened.</h2>
+		</div>
+
+		<button class="btn-scrollIt" onclick="scrollIt('may');">
+			<i class="btl bt-angle-down"></i>
+		</button>
+	</section>
+
+	<section id="stories">
+		<article id="may" class="scrollTarget story_article section group bigSection parallax" style="background-image:url(/img/mikahtristan.JPG);">
+			<div class="article_textbox col span_5_of_12 article_textbox_color_3">
+				<div class="article_textbox_inner">
+					<span class="article_intro">May</span>
+					<h2 class="article_title">The Gentlemen turned three years old</h2>
+					<h3 class="article_subtitle">Then, they started asking a lot of questions.  A lot.</h3>					
+				</div>
+			</div>
+
+			<button class="btn-scrollIt" onclick="scrollIt('july');">
+				<i class="btl bt-angle-down"></i>
+			</button>
+		</article>
+
+		<article id="july" class="scrollTarget story_article section group bigSection parallax" style="background-image:url(/img/mikahtristanasleep.jpg);">
+			<div class="article_textbox col span_5_of_12 article_textbox_color_1 right">
+				<div class="article_textbox_inner">
+					<span class="article_intro">July</span>
+					<h2 class="article_title">We drove a bunch of miles</h2>
+					<h3 class="article_subtitle">From our house to California, Arizona, then Nevada and back.</h3>
+				</div>
+			</div>
+
+			<button class="btn-scrollIt" onclick="scrollIt('august');">
+				<i class="btl bt-angle-down"></i>
+			</button>
+		</article>
+
+		<article id="august" class="scrollTarget story_article section group bigSection parallax" style="background-image:url(/img/dadsoffice.jpg); background-position: right bottom;">
+			<div class="article_textbox col span_5_of_12 article_textbox_color_2">
+				<div class="article_textbox_inner">
+					<span class="article_intro">August</span>
+					<h2 class="article_title">a new office for dad</h2>
+					<h3 class="article_subtitle">The work-from-home dad finally gets a space all his own.</h3>					
+				</div>
+			</div>
+
+			<button class="btn-scrollIt" onclick="scrollIt('october');">
+				<i class="btl bt-angle-down"></i>
+			</button>
+		</article>
+
+		<article id="october" class="scrollTarget story_article section group bigSection parallax" style="background-image:url(/img/hana.jpg);background-position:right center">
+			<div class="article_textbox col span_5_of_12 article_textbox_color_4 right">
+				<div class="article_textbox_inner">
+					<span class="article_intro">October</span>
+					<h2 class="article_title">Our baby girl finished a lap around the sun.</h2>
+					<h3 class="article_subtitle">tiny girl. huge personality.</h3>					
+				</div>
+			</div>
+
+			<button class="btn-scrollIt" onclick="scrollIt('stats');">
+				<i class="btl bt-angle-down"></i>
+			</button>
+		</article>
+	</section>
+
+	<section id="stats" class="scrollTarget">
+		<h1 class="section_title">By the numbers</h1>
+		<div class="section group">
+			<article>
+				<span class="col span_2_of_12 stat">70</span>
+				<h3 class="col span_4_of_12 label">Amazon Prime deliveries</h3>
+			</article>
+			<article>
+				<span class="col span_2_of_12 stat">70</span>
+				<h3 class="col span_4_of_12 label">Amazon Prime deliveries</h3>
+			</article>
+		</div>
+		<div class="section group">
+			<article>
+				<span class="col span_2_of_12 stat">70</span>
+				<h3 class="col span_4_of_12 label">Amazon Prime deliveries</h3>
+			</article>
+			<article>
+				<span class="col span_2_of_12 stat">70</span>
+				<h3 class="col span_4_of_12 label">Amazon Prime deliveries</h3>
+			</article>
+		</div>
+		<h1 class="section_title">Whale sightings</h1>
+		<div class="section group">
+			<ul class="col span_12_of_12 noList">
+				<li class="person">
+					<img src="" alt="" class="person_face">
+					<h2 class="person_stat">3</h2>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="resolutions" class="scrollTarget">
+		<h1 class="section_title">Resolutions for 2016</h1>
+		<div class="section group">
+			<div class="col span_2_of_12"></div>
+			<ul class="col span_8_of_12 noList">
+				<li class="section group">
+					<h2 class="row_title col span_2_of_12">Jason</h2>
+					<h3 class="row_content col span_6_of_12">Drink less coffee, sleep more, play more music, buy vinyl, use my film cameras more.</h3>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="video" class="scrollTarget bigSection">
+		
+	</section>
+
+	<section id="end" class="scrollTarget bigSection">
+		<h1 class="section_title">thanks for being part of our life.  blessings to you and your family in the new year.</h1>
+	</section>
+</body>
+</html>

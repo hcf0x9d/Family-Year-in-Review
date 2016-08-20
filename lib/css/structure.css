@@ -1,0 +1,27 @@
+.nav{
+	position: fixed;
+}
+	.nav_list{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+	}
+		.nav_list_item{
+			display: inline-block;
+			float: left;
+		}
+
+
+
+@media only screen and (min-width: 1260px){
+	html{font-size: 120% !important;}
+}
+
+@media only screen and (min-width: 1436px) {
+	body{font-size: 150% !important;}
+}
+
+@media only screen and (max-width: 480px) {
+
+}

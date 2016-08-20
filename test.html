@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Background images - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+	<script src="https://use.typekit.net/tij2qgs.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<link rel="stylesheet" type="text/css" href="lib/css/jquery.fullPage.css" />
+	
+	<link rel="stylesheet" href="lib/font/blacktie/blacktie-fontawesome.css">
+	<link rel="stylesheet" href="lib/css/style.css">
+	<link rel="stylesheet" href="lib/css/grid.css">
+	<link rel="stylesheet" href="lib/css/structure.css">
+	<link rel="stylesheet" href="lib/css/mobile.css">
+
+	<script src="lib/js/jquery-1.7.2.min.js"></script>
+
+	<style>
+	.introtable{
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+		.introcell{
+			display: table-cell;
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;
+			text-align: center;
+			background-color: rgba(128,0,0,0.8);
+		}
+		.title{
+			font: 100 10em/1em 'brandon-grotesque', sans-serif;
+			margin: 0;
+		}
+		.subtitle{
+			font: 1.625em/1.4em 'adelle', serif;
+			margin: 0 auto;
+			color: #fff;
+			max-width: 800px;
+		}
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: cover;
+	}
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url(img/cardPicture.jpg);
+	}
+	#section1{
+		background-image: url(img/mikahtristan.JPG);
+	}
+	#section2{
+		background-image: url(img/mikahtristanasleep.jpg);
+	}
+	#section3{
+		background-image: url(img/dadsoffice.jpg);
+		background-position: bottom right;
+	}
+	
+	#section4{
+		background-image: url(img/hana.jpg);
+		background-position: bottom right;
+	}
+
+ 	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(img/bg2.jpg);
+		padding: 6% 0 0 0;
+	}
+	#slide2{
+		background-image: url(imgs/bg5.jpg);
+		padding: 6% 0 0 0;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script type="text/javascript" src="lib/js/jquery.fullPage.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['pp1', 'pp2', 'pp3', 'pp4', 'pp5', 'pp6', 'pp7'],
+				menu: '#menu',
+				verticalCentered: false,
+				scrollingSpeed: 1000
+			});
+
+			//parallax();
+			
+		});
+		
+
+
+		$(window).scroll(function() {
+				console.log('scroll');
+
+		        //parallax();
+		});
+
+		function parallax() {
+		    'use strict';
+		    var scrolled = $(window).scrollTop() - 10000;
+		    $('.parallax').css('backgroundPosition', 'center ' + (scrolled / 50 + 'px'));
+		    console.log(scrolled);
+		}
+	</script>
+
+</head>
+<body>
+
+<nav class="nav">
+	<ul id="menu" class="nav_list">
+		<li class="nav_list_item" data-menuanchor="pp1"><a href="#pp1">First slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp2"><a href="#pp2">Second slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp3"><a href="#pp3">Third slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp4"><a href="#pp4">Third slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp5"><a href="#pp5">Third slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp6"><a href="#pp6">Third slide</a></li>
+		<li class="nav_list_item" data-menuanchor="pp7"><a href="#pp7">Third slide</a></li>
+	</ul>	
+</nav>
+
+
+<div id="fullpage">
+	<section class="section" id="section0">
+		<div class="introtable">
+			<div class="introcell">
+				<h1 class="title">2015</h1>
+				<h2 class="subtitle">Let’s take a walk through this year and see what happened.</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section1">
+		<div class="article_textbox col span_5_of_12 article_textbox_color_3">
+			<div class="article_textbox_inner">
+				<span class="article_intro">May</span>
+				<h2 class="article_title">The Gentlemen turned three years old</h2>
+				<h3 class="article_subtitle">Then, they started asking a lot of questions.  A lot.</h3>					
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section2">
+		<div class="article_textbox col span_5_of_12 article_textbox_color_1 right">
+			<div class="article_textbox_inner">
+				<span class="article_intro">July</span>
+				<h2 class="article_title">We drove a bunch of miles</h2>
+				<h3 class="article_subtitle">From our house to California, Arizona, then Nevada and back.</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section3">
+		<div class="article_textbox col span_5_of_12 article_textbox_color_2">
+			<div class="article_textbox_inner">
+				<span class="article_intro">August</span>
+				<h2 class="article_title">a new office for dad</h2>
+				<h3 class="article_subtitle">The work-from-home dad finally gets a space all his own.</h3>					
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section4">
+		<div class="article_textbox col span_5_of_12 article_textbox_color_4 right">
+			<div class="article_textbox_inner">
+				<span class="article_intro">October</span>
+				<h2 class="article_title">Our baby girl finished a lap around the sun.</h2>
+				<h3 class="article_subtitle">tiny girl. huge personality.</h3>					
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section5">
+		// Stats
+		<h1>Stats</h1>
+	</section>
+	<section class="section" id="section6">
+		// Video
+		<h1>Video</h1>
+	</section>
+	<section class="section" id="section7">
+		// End
+		<h1>end</h1>
+	</section>
+</div>
+
+</body>
+</html>
