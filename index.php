@@ -6,7 +6,7 @@
  *
  * TODO: Setup the schema for controllers and models
  *
- * TODO: Log the goals of the application
+ * TODO: Log the goals of the application (Client view)
  * Before Christmas:
  * 		Users visit, see paperchain items (a la Starbucks holiday free coffee campaign)
  * 			Each day user sees today's item
@@ -26,4 +26,32 @@
  *
  */
 
+
+/*
+
+Flow:
+
+-> page hit
+-> run to the DB, grab the appropriate stuff
+-> return json
+-> select view to display (paper chain, year in review or video)
+-> modify/build view with javascript
+-> log successful view in DB
+
+*/
+
+include 'models/config.model.php';
+include 'controllers/view.controller.php';
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client View</title>
+</head>
+<body>
+    <?php getView(); ?>
+</body>
+</html>
