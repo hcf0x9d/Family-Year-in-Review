@@ -16,6 +16,10 @@
 /* ========================================================================= */
 /* SETTINGS ================================================================ */
 
+// NOTE: When searching Instagram, look by user and hashtag to avoid Bots/unwanted posts.
+$ig_hashtag = 'FukuraChristmas16';
+$ig_users = array('USER', 'USER2');
+
 // Contact Email
 $contact_email = 'jason@jasonfukura.com';
 

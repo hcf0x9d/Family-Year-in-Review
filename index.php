@@ -4,9 +4,6 @@
  * This will be a Single Page App and will need to be constructed using MVC and
  * OO principals.  For simplicity, it should be flat-file
  *
- * TODO: Setup the schema for controllers and models
- *
- * TODO: Log the goals of the application (Client view)
  * Before Christmas:
  * 		Users visit, see paperchain items (a la Starbucks holiday free coffee campaign)
  * 			Each day user sees today's item
@@ -21,22 +18,13 @@
  * 		Share items or a link?
  *
  * Password protected and public versions?
- *
- * TODO: Prototype.  The application itself should be view agnostic (as much as possible)
- *
+ * *
  */
 
 
 /*
 
-Flow:
-
--> page hit
--> run to the DB, grab the appropriate stuff
--> return json
--> select view to display (paper chain, year in review or video)
--> modify/build view with javascript
--> log successful view in DB
+TODO: Wire up Google Analytics for some tracking love
 
 */
 
@@ -49,9 +37,14 @@ include 'controllers/view.controller.php';
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Client View</title>
+	<title>Merry Christmas from the Fukuras!</title>
+    <!-- TODO: OG links for FB shareouts et cetera -->
+
+    <link rel="stylesheet" href="/lib/css/style.css">
 </head>
 <body>
     <?php getView(); ?>
+
+    <script src="/lib/js/classes.js"></script>
 </body>
 </html>

@@ -4,6 +4,18 @@
  * Year in Review
  */
 
+include BASE_URI.'\models\data.model.php';
+
+function BuildEvents () {
+    $evtObj = ReviewModel();
+
+    print_r($evtObj);
+}
+
+function BuildStats () {
+
+}
+
 ?>
 <article>
     <header>
@@ -15,6 +27,7 @@
     <section>
         <!-- Review -->
         <ul>
+            <?php BuildEvents(); ?>
             <!-- ======================================================================= -->
             <!-- SECTION: TOP EVENTS                                                     -->
 
@@ -29,9 +42,6 @@
 
             <!-- END SECTION: TOP EVENTS                                                 -->
             <!-- ======================================================================= -->
-            <li></li>
-            <li></li>
-            <li></li>
         </ul>
     </section>
     <section></section>

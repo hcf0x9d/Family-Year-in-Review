@@ -1,0 +1,71 @@
+.calendar {
+    &-day {
+        list-style-type: none;
+
+        &-inner {
+            background: #fff;
+            border: 1px solid;
+            box-sizing: content-box;
+            display: block;
+            margin: 15px 0;
+            min-height: 150px;
+            z-index: 1;
+
+            &.is-past {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+                &:before{
+                    background-color: black;
+                    bottom: 40px;
+                    -webkit-box-shadow: 0 23px 17px 0 rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: 0 23px 17px 0 rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 23px 17px 0 rgba(0, 0, 0, 0.5);
+                    content: "";
+                    display: block;
+                    height: 20px;
+                    left: 11%;
+                    position: absolute;
+                    -webkit-transform: rotate(1deg);
+                    -moz-transform: rotate(1deg);
+                    transform: rotate(1deg);
+                    transition: all 0.2s ease;
+                    width: 80%;
+                    z-index: -17;
+                }
+
+                &:hover {
+                    &:before {
+                        bottom: 34px;
+                        -webkit-transform: rotate(4deg);
+                        -moz-transform: rotate(4deg);
+                        transform: rotate(4deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+    .day-cover {
+
+        &-date {
+
+        }
+    }
+
+    .day-detail {
+
+        &-verse {
+
+            &-text {
+
+            }
+        }
+
+        &-activity {
+
+            &-text {
+
+            }
+        }
+    }

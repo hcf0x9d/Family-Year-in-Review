@@ -1,6 +1,6 @@
 <?php
 
-include BASE_URI.'\models\advent.model.php';
+include BASE_URI.'\models\data.model.php';
 
 
 // Construct the advent calendar HTML
@@ -23,16 +23,18 @@ function CalendarView() {
         $day = $day['day'] + '1';
 
         echo '
-            <li class="calendar-day">
-                <div class="day-cover">
-                    <span class="day-cover-date">' . $day . '</span>
-                </div>
-                <div class="day-detail">
-                    <div class="day-detail-verse">
-                        <blockquote class="verse-text">' . $verse . '</blockquote>
+            <li class="calendar-day col-md-2 col-sm-4">
+                <div class="calendar-day-inner is-past">
+                    <div class="day-cover">
+                        <span class="day-cover-date">' . $day . '</span>
                     </div>
-                    <div class="day-detail-activity">
-                        <p class="activity-text">' . $activity . '</p>
+                    <div class="day-detail">
+                        <div class="day-detail-verse">
+                            <blockquote class="dat-detail-verse-text">' . $verse . '</blockquote>
+                        </div>
+                        <div class="day-detail-activity">
+                            <p class="day-detail-activity-text">' . $activity . '</p>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -49,17 +51,23 @@ function CalendarView() {
     // of the calendar which cannot be viewed.
     for ($i = $idx; $i <= 25; $i++) {
         echo '
-            <li class="calendar-day">
-                <div class="day-cover">
-                    <span class="day-cover-date">' . $i . '</span>
+            <li class="calendar-day col-md-2 col-sm-4">
+                <div class="calendar-day-inner">
+                    <div class="day-cover">
+                        <span class="day-cover-date">' . $i . '</span>
+                    </div>
                 </div>
             </li>
         ';
     }
 }
 
+// TODO: On entry, the user sees today's information in a modal.
 ?>
 
-<ul class="calendar">
-    <?php CalendarView(); ?>
-</ul>
+
+<main class="container">
+    <ul class="calendar row">
+        <?php CalendarView(); ?>
+    </ul>
+</main>

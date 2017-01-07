@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<events>
-   <event>
-       <title>Event Title</title>
-       <image>Event Image</image>
-       <summary>Lorem ipsum this is my summary</summary>
-   </event>
-</events>
-
-<statistics>
-    <stat>
-        <title>STAT</title>
-        <data>36</data>
-        <label>Label</label>
-        <image>Image</image>
-    </stat>
-</statistics>
+<root>
+  <events>
+     <event>
+         <title>Event Title</title>
+         <image>Event Image</image>
+         <summary>Lorem ipsum this is my summary</summary>
+     </event>
+     <event>
+         <title>Event 2 Title</title>
+         <image>Event 2 Image</image>
+         <summary>Lorem 2 ipsum this is my summary</summary>
+     </event>
+  </events>
+  <statistics>
+      <stat>
+          <title>STAT</title>
+          <data>36</data>
+          <label>Label</label>
+          <image>Image</image>
+      </stat>
+  </statistics>
+</root>
